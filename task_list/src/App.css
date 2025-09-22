@@ -10,8 +10,8 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  color: white; 
   background-color: #002828;
-  color: white; /* make text visible */
 }
 
 /* Header */
@@ -23,11 +23,12 @@
   font-weight: bold;
 }
 
-/* Main layout (sidebar + content) */
+/* Main layout */
 .main-layout {
   display: flex;
   flex: 1;
   border: 2px solid white;
+  background-color: #002828;
 }
 
 /* Sidebar */
@@ -52,7 +53,7 @@
   background-color: #006060;
 }
 
-/* Content area */
+/* Content */
 .content{
   flex: 1;
   padding: 2rem;
@@ -69,4 +70,14 @@
   padding-left: 0;
   font-size: 20px;
   list-style-position: inside;
+}
+
+.check {
+  color: limegreen;
+  font-weight: bolder;
+}
+
+.cross {
+  color: red;
+  font-weight: bold;
 }

@@ -32,8 +32,11 @@ function Tasks() {
         <ul>
           {tasks.map((task) => (
             <li key={task.id}>
-              {task.text} {"  "} 
-              {task.completed ? "✅" : "❌"}
+              {task.text} {"    "}
+              {task.completed ? 
+                <span className="check">✓</span> : 
+                <span className="cross">✗</span>
+              }
             </li>
           ))}
         </ul>
