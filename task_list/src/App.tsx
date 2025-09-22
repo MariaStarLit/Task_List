@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 fetch("http://localhost:3008/api/tasks/")
@@ -12,28 +10,28 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app-layout">
+      {/* Header */}
+      <header className="title">
+        <h1>New App</h1>
+      </header>
+      {/* Main area */}
+      <div className="main-layout">
+        {/* Sidebar */}
+        <div className="menu-bar">
+          <button>Home</button>
+          <button>Tasks</button>
+        </div>
+        {/* Content */}
+        <div className="task-list">
+          <h2>Task List</h2>
+          <ul>
+            <li>Task 1</li>
+            <li>Task 2</li>
+          </ul>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
