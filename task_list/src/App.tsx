@@ -1,23 +1,43 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import './App.css'
 
-fetch("http://localhost:3008/api/tasks/")
-  .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(err => console.error(err));
 
 function Home() {
   return <h2>Welcome Home!</h2>;
 }
 
 function Tasks() {
+  const [tasks, setTasks] = useState<{ id: number; text: string; completed: boolean }[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://localhost:3008/api/tasks/")
+      .then((res) => res.json())
+      .then((data) => {
+        setTasks(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching tasks:", err);
+        setLoading(false);
+      });
+  }, []);
   return (
     <div className="task-list">
       <h2>Task List</h2>
-      <ul>
-        <li>Task 1</li>
-        <li>Task 2</li>
-      </ul>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {tasks.map((task) => (
+            <li key={task.id}>
+              {task.text} {"  "} 
+              {task.completed ? "✅" : "❌"}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
