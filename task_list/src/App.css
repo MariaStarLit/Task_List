@@ -26,9 +26,10 @@
 /* Main layout */
 .main-layout {
   display: flex;
-  flex: 1;
+  flex: 1 1 0;
   border: 2px solid white;
   background-color: #002828;
+  min-height: 0;
 }
 
 /* Sidebar */
@@ -56,8 +57,10 @@
 /* Content */
 .content{
   flex: 1;
-  padding: 2rem;
-  padding-left: 4rem;
+  padding: 2rem 4rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
 }
 
 .task-list {
