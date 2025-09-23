@@ -2,6 +2,8 @@
 
 A simple single-page application built with **React + Vite + TypeScript** that displays a list of tasks from a REST API.
 
+--
+
 ### Features
 
 - Two menus:
@@ -35,17 +37,12 @@ cd ..
 git clone https://github.com/MarceloFonseca/tasks-api.git
 cd tasks-api
 ```
-Install dependencies:
-```bash
-npm install
-```
 Start the API (on port 3008, new task every 60s):
 ```bash
 npm install
 PORT=3008 NEW_TASK_PERIOD=60000 npm start
 ```
-API will be available at:
-http://localhost:3008/api/tasks/
+API will be available at: [http://localhost:3008/api/tasks/](http://localhost:3008/api/tasks/)  
 
 ### 3: Run Task_List
 ```bash
