@@ -40,12 +40,12 @@ Start the API (on port 3008, new task every 60s):
 npm install
 PORT=3008 NEW_TASK_PERIOD=60000 npm start
 ```
-API will be available at: [http://localhost:3008/api/tasks/](http://localhost:3008/api/tasks/)  
+API will be available at: http://localhost:3008/api/tasks 
 
 ### 3. Run Task_List
 ```bash
 cd ../Task_List
 npm run dev
 ```
-Open the app in the browser:
-http://localhost:5173
+Open the app in the browser: http://localhost:5173
+---
