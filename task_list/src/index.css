@@ -57,6 +57,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.overflow-auto>*, .overflow-scroll>*, .overflow-x-auto>*, .overflow-y-auto>* {
+    scrollbar-color: auto;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
