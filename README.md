@@ -48,4 +48,5 @@ cd ../Task_List
 npm run dev
 ```
 Open the app in the browser: http://localhost:5173
+
 ---
