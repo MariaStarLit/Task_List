@@ -51,7 +51,7 @@ function App() {
       <div className="app-layout">
         {/* Header */}
         <header className="title">
-          <h1>New App</h1>
+          <h1>Organizer</h1>
         </header>
 
         {/* Main area */}
