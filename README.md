@@ -12,7 +12,7 @@ A simple single-page application built with **React + Vite + TypeScript** that d
 
 ## Usage instructions
 
-###1. Setup Task_List App 
+### 1. Setup Task_List App 
 Clone my repository:
 ```bash
 git clone https://github.com/MariaStarLit/Task_List.git
@@ -28,7 +28,7 @@ Install frontend dependencies:
 npm install
 ```
 
-###2: Setup API
+### 2: Setup API
 Clone this repository:
 ```bash
 cd ..
@@ -47,10 +47,10 @@ PORT=3008 NEW_TASK_PERIOD=60000 npm start
 API will be available at:
 http://localhost:3008/api/tasks/
 
-###3: Run Task_List
+### 3: Run Task_List
 ```bash
 cd ../Task_List
 npm run dev
 ```
 Open the app in the browser:
-# http://localhost:5173
+http://localhost:5173
