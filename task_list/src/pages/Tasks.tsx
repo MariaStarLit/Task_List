@@ -14,16 +14,23 @@ export default function Tasks() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3008/api/tasks/")
-      .then((res) => res.json())
-      .then((data) => {
-        setTasks(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching tasks:", err);
-        setLoading(false);
-      });
+    const fetchTasks = () => {
+      fetch("http://localhost:3008/api/tasks/")
+        .then((res) => res.json())
+        .then((data) => {
+          setTasks(data);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.error("Error fetching tasks:", err);
+          setLoading(false);
+        });
+    };
+
+    fetchTasks();
+    const interval = setInterval(fetchTasks, 60000); // every 60s
+    return () => clearInterval(interval);
+
   }, []);
 
   return (
