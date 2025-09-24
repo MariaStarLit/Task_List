@@ -1,0 +1,15 @@
+/* Header.css */
+
+.header {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  background-image: url('/images/BlueLeafs.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

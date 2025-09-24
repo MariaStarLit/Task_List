@@ -1,0 +1,25 @@
+/* MenuBar.css */
+
+.menu-bar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: none;
+  border-right: 4px solid #256873;
+}
+.menu-bar button {
+  background: none;
+  color: #4ddfdc;
+  margin-bottom: 4px;
+  width: 150px;
+  font-size: 1.3em;
+  outline: 4px solid #256873;
+}
+.menu-bar button:hover {
+  border-color: #256873;
+  background-color: #003034;
+}
+.menu-bar button:focus {
+  outline: none;
+  background-color: #001112;
+}
