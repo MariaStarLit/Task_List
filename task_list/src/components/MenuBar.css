@@ -20,6 +20,5 @@
   background-color: #003034;
 }
 .menu-bar button:focus {
-  outline: none;
   background-color: #001112;
 }
